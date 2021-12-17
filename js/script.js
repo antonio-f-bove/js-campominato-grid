@@ -47,7 +47,6 @@ function toggleGameScreen() {
   // di far comparire la griglia, e di passare il livello di difficoltà
   difficultySelectorHtml.classList.toggle('hide');
   minefieldGridHtml.classList.toggle('hide');
-  // impostazione griglia
 }
 
 function createDifficultyButton(container, difficultyLevel) {
@@ -81,7 +80,7 @@ for(let i = 0; i < difficultyLevel.length; i++) {
 /* 
 Le scelte iniziali mi hanno portato ad organizzare tutto il codice in funzioni 
 incatente a cascata. Penso che per ovviare a questo avrei avuto bisogno di poter
-gestire gli eventi click e le loro conseguene in modo asincrono
+gestire gli eventi click e le loro conseguenze in modo asincrono
 
 mi rendo conto che ci sono un bel po di porcaround (cit) ma ho deciso di provare a 
 seguire il ragionamento fino in fondo
