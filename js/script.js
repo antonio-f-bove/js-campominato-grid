@@ -9,25 +9,36 @@ function createNewBox(container) {
   })
 }
 
-function startGame(difficultySelector, gridContainer, difficultyLevel) {
-  difficultySelector
+function setDifficulty(level) {
+  /* 
+  set grid
+  set squares
+  */
 }
 
-function createDifficultyButton(container, difficultyLevel) {
+function startGame(difficultyLevel, difficultySelector, gridContainer) {
+  // questa funzione si occupa di far sparire il selettore difficoltà,
+  // di far comparire la griglia, e di passare il livello di difficoltà
+  difficultySelector.classList.toggle('hide');
+}
+
+function createDifficultyButton(container, difficultyLevel, grid) {
   const newButton = document.createElement('div');
   newButton.className = `difficulty-button ${difficultyLevel}`;
+  newButton.textContent = difficultyLevel;
   container.append(newButton);
 
   newButton.addEventListener('click', function() {
-    startGame(difficultyLevel);
+    startGame(difficultyLevel, container, grid);
   })
 }
 
 /* --------------------------------------------------- */
 
 const difficultyLevel = ['easy', 'medium', 'hard'];
-const difficultySelectorHtml = document.querySelector('difficulty-selector');
+const difficultySelectorHtml = document.querySelector('.difficulty-selector');
+const minefieldHtml = document.querySelector('.minefield');
 
 for(let i = 0; i < difficultyLevel.length; i++) {
-  createDifficultyButton(difficultySelectorHtml, difficultyLevel[i]);
+  createDifficultyButton(difficultySelectorHtml, difficultyLevel[i], minefieldHtml);
 }

@@ -1,12 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
 
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
+.difficulty-selector {
+
+}
+.difficulty-selector.hide {
+  display: none;
 }
 
-.square {
-  
+.difficulty-button {
+
 }
+.difficulty-button.easy {}
+.difficulty-button.medium {}
+.difficulty-button.hard {}
+
+.minefield {
+  background-color: red;
+  height: 200px;
+}
+.minefield {
+  display: none;
+}
+.minefield.easy {
+
+}
+.minefield.medium {
+
+}
+.minefield.hard {
+
+}
+
+.square {}
+.square.easy {}
+.square.medium {}
+.square.hard {}
