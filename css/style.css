@@ -5,41 +5,82 @@
 }
 
 .container {
+  background-color: #123;
+  height: 100vh;
+  padding: 200px 0;
 
+  /* anchor for close-button */
+  position: relative;
 }
 
 .difficulty-selector {
+  margin: 0 auto;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .difficulty-selector.hide {
   display: none;
 }
 
 .difficulty-button {
+  cursor: pointer;
+  background-color: aqua;
+  font-size: 30px;
 
+  margin: 0 50px;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
-.difficulty-button.easy {}
-.difficulty-button.medium {}
-.difficulty-button.hard {}
 
 .minefield {
-  background-color: red;
-  height: 200px;
+  background-color: #789;
+  margin: 0 auto;
+  padding: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
 }
-.minefield {
+.minefield.hide {
   display: none;
 }
-.minefield.easy {
 
+.minefield.easy {
+  width: calc(7 * 30px + 20px);
+  height: calc(7 * 30px + 20px);
 }
 .minefield.medium {
-
+  width: calc(9 * 30px + 20px);
+  height: calc(9 * 30px + 20px);
 }
 .minefield.hard {
-
+  width: calc(10 * 30px + 20px);
+  height: calc(10 * 30px + 20px);
 }
 
-.square {}
-.square.easy {}
-.square.medium {}
-.square.hard {}
+.square {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #123;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.square.colored {
+  background-color: aqua;
+}
+
+.close-button {
+  width: 36px;
+  height: 36px;
+  background-color: #789;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  cursor: pointer;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
